@@ -5,7 +5,9 @@
 <%= @cocktail.name %> <br> <br>
 <% @doses.each  do |d|%>
 <p>
-  <%= d.description %> of <%= d.ingredient.name %>
+  <%= d.description %> of <%= d.ingredient.name %>  <%= link_to  "Delete", destroy_dose_path(d),
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete this flat?" } %>
 </p>
 <% end %>
 
