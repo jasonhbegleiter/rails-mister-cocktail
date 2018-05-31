@@ -2,6 +2,10 @@
   <%= @cocktail.name %>
 </div>
 
+<div class="cocktail_image">
+  <%= cl_image_tag(@cocktail.photo,
+      width: 400, height: 300, crop: :fill) %>
+</div>
 
 <% @doses.each  do |d|%>
 <p>
