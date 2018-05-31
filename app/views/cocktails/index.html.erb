@@ -1,4 +1,31 @@
-<h1>Here are the cocktails</h1>
+<div class="page_title">
+  Choose a cocktail
+</div>
+
+<div class="container" style="width:100%; height:100%">
+  <div class="index_wrapper">
+    <div class="row">
+      <% @cocktails.each do |c| %>
+      <%= link_to cocktail_path(c) do  %>
+      <div class="col-xs-12 col-sm-6 col-md-4 cocktail_index_item_wrapper">
+        <div class="cocktail_index_headline">
+          <%= c.name %>
+        </div>
+        <div class="cocktail_index_ingredient_category">
+          <% Dose.where(cocktail: c).each do |d| %>
+          <%= image_tag "ginger.jpg", class: "cocktail_ingredient_img" %>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <h1>Here are the cocktails</h1>
 
 <%= link_to "Add a new cocktail", new_cocktail_path %>
 
@@ -18,4 +45,4 @@
     </div>
     <% end %>
   </div>
-</div>
+</div> -->

@@ -1,8 +1,8 @@
-<h1>Details of the cocktail</h1>
+<div class="page_title">
+  <%= @cocktail.name %>
+</div>
 
-<%= link_to "Go back to list", cocktails_path %> <br>
 
-<%= @cocktail.name %> <br> <br>
 <% @doses.each  do |d|%>
 <p>
   <%= d.description %> of <%= d.ingredient.name %>  <%= link_to  "Delete", destroy_dose_path(d),

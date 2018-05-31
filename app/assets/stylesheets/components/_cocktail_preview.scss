@@ -1,0 +1,44 @@
+.cocktail_index_item_wrapper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-image: asset-url('cocktail_index.svg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 10px;
+}
+
+.cocktail_index_ingredient_category {
+  width: 80%;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  bottom: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cocktail_index_headline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: $text-blue;
+  font-size: 16px;
+  width: 140px;
+  text-align: center;
+}
+
+.cocktail_ingredient_img {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+
+.index_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
